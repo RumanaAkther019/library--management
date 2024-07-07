@@ -59,14 +59,14 @@ public:
     }
 };
 
-void addBook(Library lib[], int &count) {
+void addBook(Library lib[], int count) {
     if (count >= 100) {
         cout << "Library is full. Cannot add more books.\n";
         return;
     }
     cout << "Enter serial number: ";
     cin >> lib[count].sn;
-    cin.ignore(); // To clear the newline character from the input buffer
+
 
     cout << "Enter book title: ";
     cin.getline(lib[count].title, 100);
